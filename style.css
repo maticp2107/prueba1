@@ -1,0 +1,178 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box; /* AJUSTE AUTOMÁTICO DE LAS CAJAS */
+}
+/* == CSS PROPIEDADES PERSONALIZADAS == */
+:root {
+	--general-text: #4500a6;
+ 	font-size: 18px; /* MEDIA BASE : 1rem = 18px */
+}
+body {
+	background-color: #fff;
+	color: var(--general-text);
+}
+/* == ESTRUCTURA == */
+header {
+	width: 100%;
+	height: auto;
+	padding: 14px 1.5%;
+	text-align: center;
+	background-color: #ffedc6;
+}
+main {
+	width: 100%;
+	height: auto;
+	background-color: #fff;
+}
+section {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+}
+footer {
+	width: 100%;
+	height: auto;
+	margin: 0 auto;
+	padding: 14px 1.5%;
+	text-align: center;
+	background-color: #442f00;
+	background-image: url(images/background-pattern.png);
+	background-repeat: repeat;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+/* == SELECTOR ID: ELEMENTO ÚNICO == */
+/* ELEMENTO PADRE */
+#intro {
+	height: 640px;
+	background: #c4a564 url(images/background-main.jpg) fixed no-repeat center;
+	background-size: cover;
+	background-position-y: 66%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	padding: 2.5%;
+	gap: 14px;
+	color: #fff;
+	box-shadow: 0px 6px 14px rgba(102, 83, 1, 0.5);
+}
+/* ELEMENTO HIJO */
+#intro div {
+	width: 50%;
+	text-align: center;
+}
+/* == SELECTOR CLASS: ELEMENTO QUE SE REPITE EN EL DISEÑO == */
+/* ELEMENTO PADRE */
+.container-01 {
+	width: 56%;
+	padding: 2.5%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	gap: 24px;
+}
+/* ELEMENTO HIJO */
+.container-01 div {
+	width: 30%;
+}
+/* ELEMENTO PADRE */
+.container-02 {
+	/*background: #fff9db;*/
+	background-image: linear-gradient(to bottom, rgb(40, 126, 59), rgba(52, 159, 183, 0));
+	padding: 2.5%;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 24px;
+}
+/* ELEMENTO HIJO */
+.container-02 div {
+	width: 26%;
+	display: flex;
+	flex-direction: column;
+	gap: 18px;
+}
+/* IMAGEN DENTRO DEL ELEMENTO HIJO */
+.container-02 div img {
+	width: 100%;
+	border: 2px solid red;
+	padding: 10px;
+}
+/* == TIPOGRAFÍA ==  */
+@font-face {
+	font-family: miFuente01;
+	src: url(fonts/PlayfairDisplay-Black.ttf);
+}
+h1 {
+	font-size: 3rem;
+	line-height: 4.5rem;
+	font-family: miFuente01;
+}
+h2 {
+	font-size: 2.6rem;
+	line-height: 3.9rem;
+}
+h3 {
+	font-size: 2.4rem;
+	line-height: 3.6rem;
+}
+h4 {
+	font-size: 2rem;
+	line-height: 3rem;
+}
+h5 {
+	font-size: 1.6rem;
+	line-height: 2.4rem;
+}
+h6 {
+	font-size: 1.2rem;
+	line-height: 1.8rem;
+}
+p {
+	font-size: 1rem;
+	line-height: 1.5rem;
+}
+.Titulo02{
+	width: 100%;
+	text-align: center;
+}
+footer p {
+	color: #fff;
+}
+#intro h1 {
+	text-shadow: 5px 7px 6px rgb(65, 1, 1);
+}
+/* == MEDIA QUERIES TABLET PORTRAIT == */
+	@media screen and (max-width:768px) {
+	.container-02 div {
+		width: 48%;
+	}
+	#intro {
+		height: 500px;
+		background-position-x: 58%;
+	}
+}
+/* == FIN DE MEDIA QUERIES TABLET PORTRAIT == */
+
+/* == MEDIA QUERIES SMARTPHONES PORTRAIT == */
+@media screen and (max-width:600px) {
+	.container-02 div {
+		width: 100%;
+	}
+	.container-01 {
+		width: 100%;
+	}
+	#intro {
+		background-position-x: 55%;
+	}
+		#intro div {
+			width: 80%;
+		}
+	}
+/* == FIN DE MEDIA QUERIES SMARTPHONES PORTRAIT == */
