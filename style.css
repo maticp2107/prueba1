@@ -170,9 +170,13 @@ footer p {
 	}
 	#intro {
 		background-position-x: 55%;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center;
 	}
 		#intro div {
 			width: 80%;
 		}
 	}
+
 /* == FIN DE MEDIA QUERIES SMARTPHONES PORTRAIT == */
